@@ -1,0 +1,52 @@
+a) Since $X$ and $Y$ are independent:
+
+\begin{align*}
+  P(X \leq 2\ \texttt{and}\ Y \leq 2) &= P(X \leq 2) P(Y \leq 2) \\
+                                      &= (P_X(1) + P_X(2))(P_Y(1) + P_Y(2)) \\
+                                      &= (\dfrac{1}{4} + \dfrac{1}{8}) (\dfrac{1}{6} + \dfrac{1}{6}) = \dfrac{1}{4}
+\end{align*}
+
+b) From Demorgan's law:
+
+\begin{align*}
+  \overline{A \cup B} = \bar{A} \cap \bar{B}
+\end{align*}
+
+Hence
+
+\begin{align*}
+  \overline{(X > 2 \cup Y > 2)} = \overline{(X > 2)} \cap \overline{(Y > 2)} = (X \leq 2) \cap (Y \leq 2)
+\end{align*}
+
+and using the identity
+
+\begin{align*}
+  P(A) = 1 - P(\bar{A})
+\end{align*}
+
+we get that
+
+\begin{align*}
+  P(X > 2 \cup Y > 2) = 1 - P(X \leq 2, Y \leq 2) = 1 - \dfrac{1}{4} = \dfrac{3}{4}
+\end{align*}
+
+c) Since $X$ and $Y$ are independent, knowing $Y$ does not give us information about $X$:
+
+\begin{align*}
+  P(X > 2 / Y > 2) = P(X > 2) = P_X(3) + P_X(4) = \dfrac{1}{8} + \dfrac{1}{2} = \dfrac{5}{8}
+\end{align*}
+
+d)
+
+\begin{align*}
+  X < Y = &\{(X = 1, Y = 2), (X = 1, Y = 3), (X = 1, Y = 4), \\
+          &(X = 2, Y = 3), (X = 2, Y = 4), (X = 3, Y = 4)\}
+\end{align*}
+
+And $X,Y$ are independent, hence
+
+\begin{align*}
+  P(X < Y) &= P_X(1)P_Y(2) + P_X(1)P_Y(3) + P_X(1)P_Y(4) \\
+           &+ P_X(2)P_Y(3) + P_X(2)P_Y(4) + P_X(3)P_Y(4) \\
+           &= \dfrac{7}{24}
+\end{align*}

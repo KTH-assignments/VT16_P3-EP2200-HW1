@@ -1,0 +1,60 @@
+I suppose continuous random variables $X,Y$ for this exercise. For discrete ones,
+only the integral switches places with a finite sum.
+
+a)
+
+\begin{align*}
+  E[cX] = \int_{-\infty}^{+\infty} cxf_X(x) = c\int_{-\infty}^{+\infty} xf_X(x) = cE[X]
+\end{align*}
+
+b)
+
+\begin{align*}
+  E[X+Y] &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} (x+y)f_{XY}(x,y)dxdy \\
+         &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xf_{XY}(x,y)dxdy + \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} yf_{XY}(x,y)dxdy \\
+         &= E[X] + E[Y]
+\end{align*}
+
+where $f_XY(x,y)$ is the joint probability distribution of $X$ and $Y$.
+
+c)
+
+\begin{align*}
+  Var[cX] &= E[(cX)^2] - E^2(cX) = E[c^2X^2] - (cE[X])^2 \\
+          &= c^2E[X^2] - c^2E^2[X] = c^2(E[X^2] - E^2[X]) \\
+          &= c^2Var[X]
+\end{align*}
+
+
+d)
+
+\begin{align*}
+  Var[X+Y] &= E[(X+Y)^2] - E^2[X+Y] = E[X^2 + 2XY + Y^2] - (E[X]+E[Y])^2 \\
+           &= E[X^2 + 2XY + Y^2] - E^2[X] - 2E[X]E[Y] - E^2[Y] \\
+           &= E[X^2] + 2E[XY] + E[Y^2] - E^2[X] - 2E[X]E[Y] - E^2[Y] \\
+           &= E[X^2] - E^2[X] + E[Y^2] - E^2[Y] \\
+           &= Var[X] + Var[Y]
+\end{align*}
+
+where $E[XY] = E[X]E[Y]$, since $X,Y$ are independent:
+
+\begin{align*}
+  E[XY] &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xyf_{XY}(x,y)dxdy \\
+        &= \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xyf_X(x)f_Y(y)dxdy \\
+        &= \int_{-\infty}^{+\infty} xf_X(x)dx \int_{-\infty}^{+\infty} yf_Y(y)dy \\
+        &= E[X]E[Y]
+\end{align*}
+
+e)
+
+\begin{align*}
+  E[X] &= \int_{-\infty}^{+\infty} xp(x)dx = \int_{-\infty}^{+\infty} x(\alpha_1 p_1(x) + \alpha_2 p_2(x)) dx \\
+       &= \alpha_1 \int_{-\infty}^{+\infty} xp_1(x)dx + \alpha_2 \int_{-\infty}^{+\infty} xp_2(x)dx \\
+       &= \alpha_1 E_{p1}[X] + \alpha_2 E_{p2}[X]
+\end{align*}
+
+\begin{align*}
+  E[X^2] &= \int_{-\infty}^{+\infty} x^2p(x)dx = \int_{-\infty}^{+\infty} x^2(\alpha_1 p_1(x) + \alpha_2 p_2(x)) dx \\
+       &= \alpha_1 \int_{-\infty}^{+\infty} x^2p_1(x)dx + \alpha_2 \int_{-\infty}^{+\infty} x^2p_2(x)dx \\
+       &= \alpha_1 E_{p1}[X^2] + \alpha_2 E_{p2}[X^2]
+\end{align*}

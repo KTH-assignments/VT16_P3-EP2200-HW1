@@ -1,0 +1,46 @@
+a) The total area under the probability density function should be equal to one:
+
+\begin{align*}
+  \int_{-\infty}^{+\infty} f_X(x)dx &= \int_{0}^{+\infty} ce^{-4x}dx = -\dfrac{c}{4} e^{-4x} \Big|_0^{+\infty} = 1 \Leftrightarrow \\
+                                  c &= 4
+\end{align*}
+
+
+b)
+
+\begin{align*}
+  F_X(x) &= \int_{-\infty}^{x} f_X(x)dx = \int_{0}^{x} 4e^{-4x}dx = -4e^{-4x} \Big|_0^{x} + ct = 1 - e^{-4x} + ct
+\end{align*}
+
+For the CDF, the following must hold:
+
+$$F_X(0) = 0$$
+
+and
+
+$$F_X(+\infty) = 1$$
+
+Hence, $ct = 0$, and
+
+
+\begin{align*}
+  F_X(x) = \left\{
+  \begin{array}{ c l }
+  \displaystyle 0, & x < 0 \\
+  \displaystyle 1 - e^{-4x}, & x \geq 0 \\
+  \end{array}
+  \right.
+\end{align*}
+
+
+c)
+
+\begin{align*}
+  P(2 < X < 5) = F_X(5) - F_X(2) = e^{-8} - e^{-20}
+\end{align*}
+
+d)
+
+\begin{align*}
+  E[X] = \int_{-\infty}^{+\infty} xf_X(x)dx = \int_{0}^{+\infty} 4xe^{-4x} = \dfrac{1}{4}
+\end{align*}

@@ -1,0 +1,17 @@
+\begin{align*}
+  P(\texttt{spam} / \texttt{refinance}) &= \dfrac{P(\texttt{spam}, \texttt{refinance})}{P(\texttt{refinance})} = \dfrac{10^{-2}}{P(\texttt{refinance})}
+\end{align*}
+
+We can calculate $P(\texttt{refinance})$ from the law of total probability:
+
+\begin{align*}
+  P(\texttt{refinance}) &= \sum_{i=1}^{2} P(\texttt{class}_i, \texttt{refinance}) \\
+                        &= P(\texttt{spam}, \texttt{refinance}) + P(\overline{\texttt{spam}}, \texttt{refinance}) \\
+                        &= 10^{-2} + 10^{-5}
+\end{align*}
+
+Hence,
+
+\begin{align*}
+  P(\texttt{spam} / \texttt{refinance}) = \dfrac{10^{-2}}{10^{-2} + 10^{-5}}
+\end{align*}
